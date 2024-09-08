@@ -183,7 +183,8 @@ export default function Lab1() {
         <button id="wd-all-good" onClick={() => alert("Life is Good!")} type="button">
           Hello World!
         </button>
-
+        <h5>File upload</h5>
+        <input id="wd-upload" type="file"/> 
       </div>
     );
   }
