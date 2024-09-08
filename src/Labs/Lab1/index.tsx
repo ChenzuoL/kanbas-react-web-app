@@ -178,7 +178,7 @@ export default function Lab1() {
 
                 <label htmlFor="wd-text-fields-email"> Email: </label>
                 <input type="email"
-                      placeholder="jdoe@somewhere.com"
+                      placeholder="chenzuoliu@gmail.com"
                       id="wd-text-fields-email"/><br/>
 
                 <label htmlFor="wd-text-fields-salary-start"> Starting salary:
@@ -271,6 +271,16 @@ export default function Lab1() {
           <option value="FANTASY">Fantasy</option>
         </select>
 
+        {/* Anchor Tag */}
+        <h4>Anchor tag</h4>
+        Please&nbsp;
+        <a id="wd-lipsum" href="https://www.lipsum.com">click here</a>&nbsp;
+        to get dummy text<br/>
+
+        <h4>Github</h4>
+        Please&nbsp;
+        <a id="wd-lipsum" href="https://github.com/ChenzuoL/kanbas-react-web-app">click here</a>&nbsp;
+        to go to my github<br/>
       </div>
     );
   }
