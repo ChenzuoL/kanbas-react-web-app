@@ -179,12 +179,58 @@ export default function Lab1() {
         <h5>Text boxes</h5>
         <label>Biography:</label><br/>
         <textarea id="wd-textarea" cols={30} rows={10}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+        
+        {/* Buttons */}
+
         <h5 id="wd-buttons">Buttons</h5>
         <button id="wd-all-good" onClick={() => alert("Life is Good!")} type="button">
           Hello World!
         </button>
+
+        {/* File upload button */}
+
         <h5>File upload</h5>
-        <input id="wd-upload" type="file"/> 
+        <input id="wd-upload" type="file"/>
+        
+
+        {/* Radio buttons */}
+
+        <h5 id="wd-radio-buttons">Radio buttons</h5>
+
+        <label>Favorite movie genre:</label><br />
+
+        <input type="radio" name="radio-genre" id="wd-radio-comedy"/>
+        <label htmlFor="wd-radio-comedy">Comedy</label><br />
+
+        <input type="radio" name="radio-genre" id="wd-radio-drama"/>
+        <label htmlFor="wd-radio-drama">Drama</label><br />
+
+        <input type="radio" name="radio-genre" id="wd-radio-scifi"/>
+        <label htmlFor="wd-radio-scifi">Science Fiction</label><br />
+
+        <input type="radio" name="radio-genre" id="wd-radio-fantasy"/>
+        <label htmlFor="wd-radio-fantasy">Fantasy</label>
+
+        {/* CheckBoxes */}
+
+        <h5 id="wd-checkboxes">Checkboxes</h5>
+        <label>Favorite movie genre:</label><br/>
+
+        <input type="checkbox" name="check-genre" id="wd-chkbox-comedy"/>
+        <label htmlFor="wd-chkbox-comedy">Comedy</label><br/>
+
+        <input type="checkbox" name="check-genre" id="wd-chkbox-drama"/>
+        <label htmlFor="wd-chkbox-drama">Drama</label><br/>
+
+        <input type="checkbox" name="check-genre" id="wd-chkbox-scifi"/>
+        <label htmlFor="wd-chkbox-scifi">Science Fiction</label><br/>
+
+        <input type="checkbox" name="check-genre" id="wd-chkbox-fantasy"/>
+        <label htmlFor="wd-chkbox-fantasy">Fantasy</label>
+
+        {/* Dropdowns */}
+
+        
       </div>
     );
   }
