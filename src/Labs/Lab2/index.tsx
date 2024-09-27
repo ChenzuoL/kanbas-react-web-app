@@ -5,6 +5,7 @@ import Border from "./Border";
 import Padding from "./Padding";
 import Margins from "./Margins";
 import Corners from "./Corners";
+import Dimensions from "./Dimensions";
 export default function Lab2() {
   return (
     <div id="wd-lab2">
@@ -75,6 +76,9 @@ Here's another paragraph using a different ID and a different look and
       </div>
       <div id="wd-css-corners">
         <Corners/>
+      </div>
+      <div id="wd-css-dimensions">
+        <Dimensions/>
       </div>
     </div>
   );
