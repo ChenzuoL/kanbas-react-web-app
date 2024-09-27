@@ -3,6 +3,7 @@ import ForegroundColors from "./ForegroundColors";
 import BackgroundColor from "./BackgroundColors";
 import Border from "./Border";
 import Padding from "./Padding";
+import Margins from "./Margins";
 export default function Lab2() {
   return (
     <div id="wd-lab2">
@@ -67,6 +68,9 @@ Here's another paragraph using a different ID and a different look and
       </div>
       <div id="wd-css-padding">
         <Padding/>
+      </div>
+      <div id="wd-css-margins">
+        <Margins/>
       </div>
     </div>
   );
