@@ -8,6 +8,7 @@ import Corners from "./Corners";
 import Dimensions from "./Dimensions";
 import Position from "./Position";
 import Zindex from "./Zindex";
+import Float from "./Float";
 export default function Lab2() {
   return (
     <div id="wd-lab2">
@@ -70,6 +71,7 @@ Here's another paragraph using a different ID and a different look and
       <Dimensions/>
       <Position/>
       <Zindex/>
+      <Float/>
     </div>
   );
 }
