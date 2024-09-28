@@ -14,6 +14,7 @@ import Flex from "./Flex";
 import ReactIconsSampler from "./ReactIcons";
 import BootstrapGrids from "./BootstrapGrids";
 import ScreenSizeLabel from "./ScreenSizeLabel";
+import BootstrapTable from "./Bootstraptables";
 export default function Lab2() {
   return (
     <div className="container">
@@ -82,6 +83,7 @@ Here's another paragraph using a different ID and a different look and
       <ReactIconsSampler/>
       <BootstrapGrids/>
       <ScreenSizeLabel/>
+      <BootstrapTable/>
     </div>
   );
 }
