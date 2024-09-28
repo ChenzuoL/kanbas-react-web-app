@@ -12,6 +12,7 @@ import Float from "./Float";
 import GridLayout from "./GridLayout";
 import Flex from "./Flex";
 import ReactIconsSampler from "./ReactIcons";
+import BootstrapGrids from "./BootstrapGrids";
 export default function Lab2() {
   return (
     <div className="container">
@@ -78,6 +79,7 @@ Here's another paragraph using a different ID and a different look and
       <GridLayout/>
       <Flex/>
       <ReactIconsSampler/>
+      <BootstrapGrids/>
     </div>
   );
 }
