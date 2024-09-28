@@ -17,6 +17,7 @@ import ScreenSizeLabel from "./ScreenSizeLabel";
 import BootstrapTable from "./BootstrapTables";
 import BootstrapLists from "./BootstrapLists";
 import BootstrapForms from "./BootstrapForms";
+import BootstrapNavigation from "./BootstrapNavigation";
 export default function Lab2() {
   return (
     <div className="container">
@@ -88,6 +89,7 @@ Here's another paragraph using a different ID and a different look and
       <BootstrapTable/>
       <BootstrapLists/>
       <BootstrapForms/>
+      <BootstrapNavigation/>
     </div>
   );
 }
