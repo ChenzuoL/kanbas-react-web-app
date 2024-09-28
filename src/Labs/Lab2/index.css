@@ -159,3 +159,9 @@ p#wd-id-selector-2 {
   right: 0px;
   bottom: 50%;
 }
+
+/* Z-index */
+.wd-zindex-bring-to-front {
+    z-index: 10;
+ }
+ 
