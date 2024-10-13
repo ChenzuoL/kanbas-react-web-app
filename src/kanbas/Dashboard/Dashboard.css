@@ -1,0 +1,12 @@
+/* Dashboard.css */
+
+/* Add white spacing between courses */
+.wd-dashboard-course {
+    width: 260px;               /* Fixed width for the courses */
+    margin-bottom: 35px;        /* Vertical spacing between courses */
+    margin-left: 15px;          /* Horizontal spacing between courses */
+    margin-right: 15px;         /* Horizontal spacing between courses */
+  }
+  
+  
+  
