@@ -9,6 +9,22 @@ import LegacyFunctions from "./LegacyFunctions";
 import ArrowFunctions from "./ArrowFunctions";
 import ImpliedReturn from "./ImpliedReturn";
 import TemplateLiterals from "./TempLateLiterals";
+import SimpleArrays from "./SimpleArrays";
+import ArrayIndexAndLength from "./ArrayIndexAndLength";
+import AddingAndRemovingToFromArrays from "./AddingAndRemovingToFromArrays";
+import ForLoops from "./ForLoops";
+import MapFunction from "./MapFunction";
+import FindFunction from "./FindFunction";
+import FindIndex from "./FindIndex";
+import FilterFunction from "./FilterFunction";
+import JsonStringify from "./JsonStringfy";
+import House from "./House";
+import TodoItem from "./TodoItem";
+import TodoList from "./TodoList";
+import Spreading from "./Spreading";
+import Destructing from "./Desturcting";
+import FunctionDestructing from "./FunctionDestructing";
+import DestructingImports from "./DestructingImports";
 
 export default function Lab3() {
   return(
@@ -25,6 +41,23 @@ export default function Lab3() {
       <ArrowFunctions/>
       <ImpliedReturn/>
       <TemplateLiterals/>
+      <SimpleArrays/>
+      <ArrayIndexAndLength/>
+      <AddingAndRemovingToFromArrays/>
+      <ForLoops/>
+      <MapFunction/>
+      <FindFunction/>
+      <FindIndex/>
+      <FilterFunction/>
+      <JsonStringify/>
+      <House/>
+      <TodoItem/>
+      <TodoList/>
+      <Spreading/>
+      <Destructing/>
+      <FunctionDestructing/>
+      <DestructingImports/>
+
     </div>
   );
 }
