@@ -1,11 +1,21 @@
+import { useParams, Link } from 'react-router-dom';
+import * as db from "../../Database"; // Import the database containing assignments
+
 export default function AssignmentEditor() {
+  const { cid, aid } = useParams();
+  const assignment = db.assignmentsData.find((assignment) => assignment._id === aid);
+  if (!assignment) {
+    return <p>Assignment not found</p>; // You can replace this with a more user-friendly message or redirect
+  }
+
+
   return (
     <div id="wd-assignments-editor" className="container-fluid mt-5">
       <form>
         {/* Assignment Name */}
         <div className="mb-4">
           <label htmlFor="wd-name" className="form-label"><h5>Assignment Name</h5></label>
-          <input id="wd-name" value="A1" className="form-control w-100" />
+          <input id="wd-name" value = {assignment.title} className="form-control w-100" />
         </div>
 
         {/* Description */}
@@ -17,7 +27,7 @@ export default function AssignmentEditor() {
             className="form-control w-100"
             placeholder="Enter assignment description here"
           >
-            The assignment is available online. Submit a link to the landing page of your Web application running on Netlify...
+            {assignment.description}
           </textarea>
         </div>
 
@@ -25,7 +35,7 @@ export default function AssignmentEditor() {
         <div className="row mb-3">
           <label htmlFor="wd-points" className="col-sm-3 col-form-label text-end">Points</label>
           <div className="col-sm-9">
-            <input id="wd-points" type="number" value={100} className="form-control" />
+            <input id="wd-points" type="number" value={assignment.points} className="form-control" />
           </div>
         </div>
 
@@ -99,18 +109,18 @@ export default function AssignmentEditor() {
             {/* Due Date */}
             <label htmlFor="wd-due-date" className="col-sm-3 col-form-label fw-bold text-nowrap">Due Date</label>
             <div className="col-sm-10">
-              <input type="datetime-local" id="wd-due-date" value="2024-05-13T23:59" className="form-control" />
+              <input type="datetime-local" id="wd-due-date" value={"2024-05-13T23:59"} className="form-control" />
             </div>
 
             {/* Available From and Until */}
             <div className="row">
               <div className="col-sm-6">
                 <label htmlFor="wd-available-from" className="col-form-label fw-bold text-nowrap">Available From</label>
-                <input type="datetime-local" id="wd-available-from" value="2024-05-06T00:00" className="form-control" />
+                <input type="datetime-local" id="wd-available-from" value={assignment.availableFrom} className="form-control" />
               </div>
               <div className="col-sm-6">
                 <label htmlFor="wd-available-until" className="col-form-label fw-bold text-nowrap">Until</label>
-                <input type="datetime-local" id="wd-available-until" value="2024-05-20T00:00" className="form-control" />
+                <input type="datetime-local" id="wd-available-until" value={assignment.availableUntil} className="form-control" />
               </div>
             </div>
           </div>
@@ -119,8 +129,12 @@ export default function AssignmentEditor() {
         <hr/>
         {/* Buttons */}
         <div className="d-flex justify-content-end">
-          <button type="button" className="btn btn-secondary me-2">Cancel</button>
-          <button type="submit" className="btn btn-success">Save</button>
+          <Link to={`/Kanbas/courses/${cid}/Assignments`} className="btn btn-secondary me-2">
+            Cancel
+          </Link>
+          <Link to={`/Kanbas/courses/${cid}/Assignments`} className="btn btn-danger">
+            Save
+          </Link>
         </div>
       </form>
     </div>

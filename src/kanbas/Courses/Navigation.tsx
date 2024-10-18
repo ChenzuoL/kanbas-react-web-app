@@ -1,31 +1,37 @@
-import { Link, useLocation } from "react-router-dom";
-import "../styles.css"
+import { Link, useLocation, useParams } from "react-router-dom";
+import "../styles.css";
 
 export default function CoursesNavigation() {
-  // Use useLocation to get the current path
-  const location = useLocation();
+  const { cid } = useParams(); // Retrieves the course ID from the URL
+  const { pathname } = useLocation(); // Retrieves the current path
 
-  // Determine the active link based on the current path
-  const getActiveLinkClass = (path:string) => {
-    return location.pathname === path ? "active" : "";
-  };
+  console.log("Path:", pathname); // Debugging to check if courseId is correctly retrieved
+
+  const links = [
+    { label: "Home", path: `/Kanbas/Courses/${cid}/Home` },
+    { label: "Modules", path: `/Kanbas/Courses/${cid}/Modules` },
+    { label: "Piazza", path: `/Kanbas/Courses/${cid}/Piazza` },
+    { label: "Zoom", path: `/Kanbas/Courses/${cid}/Zoom` },
+    { label: "Assignments", path: `/Kanbas/Courses/${cid}/Assignments` },
+    { label: "Quizzes", path: `/Kanbas/Courses/${cid}/Quizzes` },
+    { label: "Grades", path: `/Kanbas/Courses/${cid}/Grades` },
+    { label: "People", path: `/Kanbas/Courses/${cid}/People` },
+  ];
 
   return (
     <div id="wd-courses-navigation" className="wd list-group fs-5 rounded-0">
-      <Link to="/Kanbas/Courses/1234/Home" id="wd-course-home-link"
-        className={`list-group-item border border-0 ${getActiveLinkClass('/Kanbas/Courses/1234/Home')}`}> Home </Link>
-      <Link to="/Kanbas/Courses/1234/Modules" id="wd-course-modules-link"
-        className={`list-group-item border border-0 ${getActiveLinkClass('/Kanbas/Courses/1234/Modules')}`}> Modules </Link>
-      <Link to="/Kanbas/Courses/1234/Piazza" id="wd-course-piazza-link"
-        className={`list-group-item border border-0 ${getActiveLinkClass('/Kanbas/Courses/1234/Piazza')}`}> Piazza </Link>
-      <Link to="/Kanbas/Courses/1234/Zoom" id="wd-course-zoom-link"
-        className={`list-group-item border border-0 ${getActiveLinkClass('/Kanbas/Courses/1234/Zoom')}`}> Zoom </Link>
-      <Link to="/Kanbas/Courses/1234/Assignments" id="wd-course-assignments-link"
-        className={`list-group-item border border-0 ${getActiveLinkClass('/Kanbas/Courses/1234/Assignments')}`}> Assignments </Link>
-      <Link to="/Kanbas/Courses/1234/Quizzes" id="wd-course-quizzes-link"
-        className={`list-group-item border border-0 ${getActiveLinkClass('/Kanbas/Courses/1234/Quizzes')}`}> Quizzes </Link>
-      <Link to="/Kanbas/Courses/1234/People" id="wd-course-people-link"
-        className={`list-group-item border border-0 ${getActiveLinkClass('/Kanbas/Courses/1234/People')}`}> People </Link>
+      {links.map((link) => (
+        <Link
+          key={link.path}
+          to={link.path}
+          id={`wd-course-${link.label.toLowerCase()}-link`}
+          className={`list-group-item border border-0 ${
+            pathname === link.path ? "active" : ""
+          }`}
+        >
+          {link.label}
+        </Link>
+      ))}
     </div>
   );
 }
